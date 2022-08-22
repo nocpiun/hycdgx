@@ -15,10 +15,6 @@ nav
         li
             float: left
             height: 100%
-            padding-left: 20px
-            padding-right: 20px
-            padding-block-start: .7rem
-            padding-block-end: .7rem
             font-family: NotoSans-SC-Medium
             cursor: pointer
             &:hover
@@ -29,3 +25,19 @@ nav
                 background-color: transparent
             &.homepage-link
                 font-weight: bold
+            &.hitokoto
+                float: right
+                font-family: NotoSans-SC-Light
+                background-color: transparent !important
+                cursor: default
+            a
+                display: block
+                width: 100%
+                height: 100%
+                color: #000 !important
+                text-decoration: none
+            a, &.hitokoto
+                padding-left: 20px
+                padding-right: 20px
+                padding-block-start: .7rem
+                padding-block-end: .7rem

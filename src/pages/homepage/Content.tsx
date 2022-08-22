@@ -12,7 +12,7 @@ const Content: React.FC = () => {
                         <br /><br />
                         服务器还安装了货币交易系统, 可供玩家在服务器内通过货币换取更多物品.
                     </Card.Text>
-                    <Card.Link>快速开始</Card.Link>
+                    <Card.Link href="/quick-start">快速开始</Card.Link>
                 </Card.Body>
             </Card>
             <Card>
@@ -33,8 +33,8 @@ const Content: React.FC = () => {
                     <Card.Text>
                         请注意您氪金后 <b>无法</b> 获得任何物品, 您的捐款会添置到服务器配置, 网络宽带等地方. 谢谢您的支持!
                     </Card.Text>
-                    <Card.Link>Donate</Card.Link>
-                    <Card.Link href="https://jq.qq.com/?_wv=1027&k=5tNAp0k" target="_blank">加入QQ群</Card.Link>
+                    <Card.Link href="/donate.png" target="_blank">Donate</Card.Link>
+                    <Card.Link href="https://jq.qq.com/?_wv=1027&k=xMKnb2Un" target="_blank">加入QQ群</Card.Link>
                 </Card.Body>
             </Card>
         </div>
