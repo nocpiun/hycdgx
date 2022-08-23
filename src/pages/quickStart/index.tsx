@@ -1,6 +1,7 @@
 import React from "react";
 
 import Page from "../../components/Page";
+import { qq } from "../../global";
 
 const QuickStart: React.FC = () => {
     return (
@@ -38,7 +39,7 @@ const QuickStart: React.FC = () => {
                 <li>输入 <code>./tailscale.exe up --authkey=tskey-5c3725e9e145984eefedd77e --accept-routes</code></li>
                 <li>出现success!就代表配置成功, 即可开始游玩游戏</li>
             </ol>
-            <p>若按照步骤操作时出现任何问题, 敬请进入<a href="https://jq.qq.com/?_wv=1027&k=xMKnb2Un" target="_blank" rel="noreferrer">QQ群</a>询问!</p>
+            <p>若按照步骤操作时出现任何问题, 敬请进入<a href={qq} target="_blank" rel="noreferrer">QQ群</a>询问!</p>
         </Page>
     );
 }

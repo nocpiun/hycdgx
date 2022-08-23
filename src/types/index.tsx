@@ -14,3 +14,30 @@ export interface PageProps extends PropsWithChildren {
     title: string
     source: string
 }
+
+export interface ImageBoxProps {
+    src: string
+}
+
+export interface ServerPlayer {
+    world: string
+    armor: number
+    name: string
+    x: number
+    y: number
+    z: number
+    health: number
+    sort: number
+    type: string
+    account: string
+}
+
+export interface ServerInfoResponse {
+    currentcount: number
+    hasStorm: boolean
+    players: ServerPlayer[]
+    isThundering: boolean
+    confighash: number
+    servertime: number
+    timestamp: number
+}

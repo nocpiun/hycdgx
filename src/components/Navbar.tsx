@@ -27,6 +27,9 @@ const Navbar: React.FC = () => {
                     <a href="/rules">游戏规则</a>
                 </li>
                 <li>
+                    <a href="/pictures">游戏截图</a>
+                </li>
+                <li>
                     <a href="https://map.hycdgx.com" target="_blank" rel="noreferrer">地图</a>
                 </li>
                 <li>

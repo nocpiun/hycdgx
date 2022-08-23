@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Homepage from "./pages/homepage";
 import QuickStart from "./pages/quickStart";
 import Rules from "./pages/rules";
+import Pictures from "./pages/pictures";
 import About from "./pages/about";
 import NotFound from "./pages/404";
 
@@ -24,6 +25,7 @@ const Main: React.FC = () => {
                     <Route path="/" element={<Homepage />}/>
                     <Route path="/quick-start" element={<QuickStart />}/>
                     <Route path="/rules" element={<Rules />}/>
+                    <Route path="/pictures" element={<Pictures />}/>
                     <Route path="/about" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>
                 </Routes>

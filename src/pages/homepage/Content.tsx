@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
+import { qq } from "../../global";
+
 const Content: React.FC = () => {
     return (
         <div className="content-container">
@@ -32,9 +34,11 @@ const Content: React.FC = () => {
                     <Card.Title>赞助</Card.Title>
                     <Card.Text>
                         请注意您氪金后 <b>无法</b> 获得任何物品, 您的捐款会添置到服务器配置, 网络宽带等地方. 谢谢您的支持!
+                        <br /><br />
+                        在您捐款后, 您的名字将会出现在服务器内的赞助榜.
                     </Card.Text>
                     <Card.Link href="/donate.png" target="_blank">Donate</Card.Link>
-                    <Card.Link href="https://jq.qq.com/?_wv=1027&k=xMKnb2Un" target="_blank">加入QQ群</Card.Link>
+                    <Card.Link href={qq} target="_blank">加入QQ群</Card.Link>
                 </Card.Body>
             </Card>
         </div>

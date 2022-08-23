@@ -1,6 +1,7 @@
 import React from "react";
 
 import ButtonLink from "../../components/ButtonLink";
+import { qq } from "../../global";
 
 const Header: React.FC = () => {
     return (
@@ -12,7 +13,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="quick-start-bar">
                     <ButtonLink to="/quick-start">快速开始</ButtonLink>
-                    <ButtonLink to="https://jq.qq.com/?_wv=1027&k=xMKnb2Un" newtab>加入QQ群</ButtonLink>
+                    <ButtonLink to={qq} newtab>加入QQ群</ButtonLink>
                 </div>
             </div>
         </header>
