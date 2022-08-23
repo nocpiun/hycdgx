@@ -27,10 +27,13 @@ const Navbar: React.FC = () => {
                     <a href="/rules">游戏规则</a>
                 </li>
                 <li>
+                    <a href="https://map.hycdgx.com" target="_blank" rel="noreferrer">地图</a>
+                </li>
+                <li>
                     <a href="/about">关于</a>
                 </li>
 
-                <li className="hitokoto">{hitokoto}</li>
+                <li className="hitokoto" title="Hitokoto">{hitokoto}</li>
             </ul>
         </nav>
     );
