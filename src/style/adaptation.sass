@@ -1,0 +1,81 @@
+@media screen and ( max-width: 2560px ) // 4K
+    .homepage
+        .header-container
+            background-size: cover
+
+@media screen and ( max-width: 1440px ) // Large laptop
+    nav
+        padding-left: 0
+        padding-right: 0
+    .homepage
+        .header-container
+            .title
+                h1
+                    font-size: 60pt !important
+            .quick-start-bar
+                margin-top: 7vh !important
+        .content-container
+            padding-left: 50px
+            padding-right: 50px
+
+@media screen and ( max-width: 1024px ) // Laptop
+    .homepage
+        .header-container
+            .title
+                h1
+                    padding-top: 100px !important
+    .page
+        article
+            width: 57%
+
+@media screen and ( max-width: 768px ) // iPad
+    nav
+        .hitokoto
+            display: none
+    .homepage
+        overflow-y: auto
+        .header-container
+            .quick-start-bar
+                margin-bottom: 15px
+        .content-container
+            flex-direction: column
+            .card
+                margin-bottom: 15px
+    .page
+        article
+            width: 75%
+
+@media screen and ( max-width: 425px ) // Large mobile phone
+    nav
+        height: auto
+    .homepage
+        overflow-y: hidden
+        .header-container
+            flex: 3
+            .title
+                h1
+                    font-size: 50pt !important
+                p
+                    font-size: 12pt !important
+        .content-container
+            overflow-y: auto
+            .card
+                margin-left: 0
+                margin-right: 0
+                margin-bottom: 25px
+    .page
+        article
+            width: 100%
+            header
+                h1
+                    font-size: 26pt
+
+@media screen and ( max-width: 375px ) // Medium mobile phone
+    .homepage
+        .content-container
+            padding-left: 30px
+            padding-right: 30px
+    .page
+        article
+            padding-left: 40px
+            padding-right: 40px
