@@ -15,6 +15,7 @@ const Content: React.FC = () => {
                         服务器还安装了货币交易系统, 可供玩家在服务器内通过货币换取更多物品.
                     </Card.Text>
                     <Card.Link href="/quick-start">快速开始</Card.Link>
+                    <Card.Link href="https://www.bilibili.com/video/BV1rC4y1b7GB" target="_blank">宣传片</Card.Link>
                 </Card.Body>
             </Card>
             <Card>
