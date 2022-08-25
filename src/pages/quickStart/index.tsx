@@ -8,7 +8,7 @@ const QuickStart: React.FC = () => {
         <Page id="quick-start" title="快速开始" source="/src/pages/quickStart/index.tsx">
             <p>HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等内容.</p>
             <p>服务器还安装了货币交易系统和快捷商店插件, 可供玩家在服务器内更方便地获取更多物品.</p>
-            <p>同时, 服务器还开放了环服地图网站: <a href="https://map.hycdgx.com" target="_blank" rel="noreferrer">https://map.hycdgx.com</a>. 通过这个网站, 就可以不用进服也能观察服务器了.</p>
+            <p>同时, 服务器还开放了环服地图网站: <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">http://map.hycdgx.com</a>. 通过这个网站, 就可以不用进服也能观察服务器了.</p>
 
             <hr />
             <h3>如何游玩?</h3>
@@ -36,7 +36,7 @@ const QuickStart: React.FC = () => {
             <ol>
                 <li>下载Tailscale: <a href="https://tailscale.com/download/" target="_blank" rel="noreferrer">https://tailscale.com/download/</a></li>
                 <li>安装后会自动弹出登录窗口, 选择微软登录. <b>用户名</b>: <code>hycdgxmc@outlook.com</code> <b>密码</b>: <code>Minecraft8$</code></li>
-                <li>登录后即配置成功, 即可使用<code>play.hycdgx.com</code>进服, 以及<a href="https://play.hycdgx.com:8888" target="_blank" rel="noreferrer">进服软件专用地图站</a></li>
+                <li>登录后即配置成功, 即可使用<code>play.hycdgx.com</code>进服, 以及<a href="http://play.hycdgx.com:8888" target="_blank" rel="noreferrer">进服软件专用地图站</a></li>
             </ol>
             <p>若按照步骤操作时出现任何问题, 敬请进入<a href={qq} target="_blank" rel="noreferrer">QQ群</a>询问!</p>
         </Page>
