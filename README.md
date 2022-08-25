@@ -1,3 +1,3 @@
 # HYCDGX
 
-**[https://hycdgx.nin.red](https://hycdgx.nin.red)**
+**[https://site.hycdgx.com](https://site.hycdgx.com)**
