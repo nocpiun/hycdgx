@@ -13,6 +13,7 @@ const Header: React.FC = () => {
     
     const handleMouseMove = (e: React.MouseEvent) => {
         if(!bannerSize.current) return;
+        if(window.screen.width <= 768) return;
         const bs = bannerSize.current;
 
         const header = Utils.getElem("header");
@@ -31,6 +32,7 @@ const Header: React.FC = () => {
     };
 
     const handleMouseLeave = () => {
+        if(window.screen.width <= 768) return;
         setMousePos(posInitValue);
     };
 
