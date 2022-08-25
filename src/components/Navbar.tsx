@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
             .catch((err) => {
                 throw err;
             });
-    });
+    }, []);
 
     return (
         <nav>
