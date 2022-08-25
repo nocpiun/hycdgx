@@ -17,6 +17,8 @@ export interface PageProps extends PropsWithChildren {
 
 export interface ImageBoxProps {
     src: string
+    world: string
+    where?: string
 }
 
 export interface ServerPlayer {
