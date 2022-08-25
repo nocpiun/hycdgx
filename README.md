@@ -1,3 +1,3 @@
 # HYCDGX
 
-> This project hasn't completed yet...
+**[https://hycdgx.nin.red](https://hycdgx.nin.red)**
