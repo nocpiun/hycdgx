@@ -20,13 +20,13 @@ const QuickStart: React.FC = () => {
                     <code>mc.hycdgx.com</code>
                 </li>
                 <li>
-                    <code>hz.hycdgx.com</code>
+                    <code>play.hycdgx.com</code>
                 </li>
                 <li>
                     <code>v6only.hycdgx.com</code>
                 </li>
             </ol>
-            <p>其中, <code>v6only.hycdgx.com</code> 是ipv6直连的IP地址, 需要你的网络环境支持ipv6.</p>
+            <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需配置Tailscale进服; <code>v6only.hycdgx.com</code> 是ipv6直连的IP地址, 需要你的网络环境支持ipv6.</p>
             <p>本服务器同时支持Java版和基岩版, 两个版本共用这几个IP地址, 且端口均为默认端口. (即Java版25565, 基岩版19132)</p>
 
             <hr />
@@ -35,9 +35,8 @@ const QuickStart: React.FC = () => {
             <p>如果你想提升你在服务器中的游玩体验, 这里推荐配置Tailscale来进入服务器.</p>
             <ol>
                 <li>下载Tailscale: <a href="https://tailscale.com/download/" target="_blank" rel="noreferrer">https://tailscale.com/download/</a></li>
-                <li>安装后找到软件安装目录, 在空白处按住shift+右键, 选择打开Powershell</li>
-                <li>输入 <code>./tailscale.exe up --authkey=tskey-5c3725e9e145984eefedd77e --accept-routes</code></li>
-                <li>出现success!就代表配置成功, 即可开始游玩游戏</li>
+                <li>安装后会自动弹出登录窗口, 选择微软登录. <b>用户名</b>: <code>hycdgxmc@outlook.com</code> <b>密码</b>: <code>Minecraft8$</code></li>
+                <li>登录后即配置成功, 即可使用<code>play.hycdgx.com</code>进服, 以及<a href="https://play.hycdgx.com:8888" target="_blank" rel="noreferrer">进服软件专用地图站</a></li>
             </ol>
             <p>若按照步骤操作时出现任何问题, 敬请进入<a href={qq} target="_blank" rel="noreferrer">QQ群</a>询问!</p>
         </Page>
