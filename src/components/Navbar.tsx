@@ -33,6 +33,9 @@ const Navbar: React.FC = () => {
                     <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">地图</a>
                 </li>
                 <li>
+                    <a href="/comment">留言板</a>
+                </li>
+                <li>
                     <a href="/about">关于</a>
                 </li>
 
