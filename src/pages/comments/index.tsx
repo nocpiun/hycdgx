@@ -1,5 +1,5 @@
-import React from "react";
-import Gitalk from "gitalk/dist/gitalk-component";
+import React, { useEffect } from "react";
+import Gitalk from "gitalk";
 
 import Page from "../../components/Page";
 
@@ -7,17 +7,23 @@ import Page from "../../components/Page";
 import "gitalk/dist/gitalk.css";
 
 const Comment: React.FC = () => {
+    useEffect(() => {
+        const gitalkInstance = new Gitalk({
+            clientID: "ee4b38a90d3d378d6aef",
+            clientSecret: "5799cb60689c44ee1390e9b1fc1510a56fbc6d2b",
+            repo: "hycdgx",
+            owner: "nocpiun",
+            admin: ["NriotHrreion"],
+            number: 1,
+            labels: ["Gitalk"]
+        });
+
+        gitalkInstance.render("gitalk-instance");
+    }, []);
+
     return (
         <Page id="comment" title="留言板" source="/src/pages/comment/index.tsx">
-            <Gitalk options={{
-                clientID: "ee4b38a90d3d378d6aef",
-                clientSecret: "5799cb60689c44ee1390e9b1fc1510a56fbc6d2b",
-                repo: "hycdgx",
-                owner: "nocpiun",
-                admin: ["NriotHrreion"],
-                number: 1,
-                labels: ["Gitalk"]
-            }}/>
+            <div className="gitalk-container" id="gitalk-instance"></div>
         </Page>
     );
 }
