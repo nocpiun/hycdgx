@@ -22,7 +22,7 @@ const Comment: React.FC = () => {
     }, []);
 
     return (
-        <Page id="comment" title="留言板" source="/src/pages/comment/index.tsx">
+        <Page id="comment" title="留言板" source="/src/pages/comments/index.tsx">
             <div className="gitalk-container" id="gitalk-instance"></div>
         </Page>
     );
