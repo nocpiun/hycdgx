@@ -23,7 +23,7 @@ const QuickStart: React.FC = () => {
     });
 
     useEffect(() => {
-        Axios.get<ServerInfoResponse>("http://mcapi.us/server/status?ip=mc.hycdgx.com&port=25565")
+        Axios.get<ServerInfoResponse>("https://mcapi.us/server/status?ip=mc.hycdgx.com&port=25565")
             .then((res) => {
                 setServerInfo({
                     online: res.data.online,
