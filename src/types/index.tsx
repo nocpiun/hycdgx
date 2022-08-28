@@ -40,6 +40,12 @@ export interface ImageBoxProps {
     where?: string
 }
 
+export interface ServerCardProps {
+    name: string
+    host: string
+    port: number
+}
+
 export interface ServerInfo {
     online: boolean
     icon: string

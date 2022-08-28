@@ -1,43 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React from "react";
 
 import Page from "../../components/Page";
 import Section from "../../components/Section";
 import ServerCard from "./ServerCard";
 import { qq } from "../../global";
-import { ServerInfo, ServerInfoResponse } from "../../types";
 
 const QuickStart: React.FC = () => {
-    const [serverInfo, setServerInfo] = useState<ServerInfo>({
-        online: false,
-        icon: "",
-        name: "",
-        motd: {
-            extra: [],
-            text: ""
-        },
-        players: {
-            max: -1,
-            now: -1
-        }
-    });
-
-    useEffect(() => {
-        Axios.get<ServerInfoResponse>("https://mcapi.us/server/status?ip=mc.hycdgx.com&port=25565")
-            .then((res) => {
-                setServerInfo({
-                    online: res.data.online,
-                    icon: res.data.favicon,
-                    name: "mc.hycdgx.com",
-                    motd: res.data.motd_json,
-                    players: res.data.players
-                });
-            })
-            .catch((err) => {
-                throw err;
-            });
-    }, []);
-
     return (
         <Page id="quick-start" title="快速开始" source="/src/pages/quickStart/index.tsx">
             <p>HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等内容.</p>
@@ -72,8 +40,8 @@ const QuickStart: React.FC = () => {
                 <p>若按照步骤操作时出现任何问题, 敬请进入<a href={qq} target="_blank" rel="noreferrer">QQ群</a>询问!</p>
             </Section>
 
-            <Section title="Ping">
-                <ServerCard {...serverInfo}/>
+            <Section title="服务器状态">
+                <ServerCard name="HYCDGX 服务器" host="mc.hycdgx.com" port={25565}/>
             </Section>
         </Page>
     );

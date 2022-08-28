@@ -10,6 +10,9 @@
     .server-info
         display: flex
         flex-direction: row
+        img
+            width: 64px
+            height: 64px
         .server-description
             padding-top: 2px
             padding-left: 5px
@@ -17,10 +20,13 @@
                 margin-bottom: 0
                 font-size: 10pt
                 white-space: pre-wrap
-            .bold
-                font-weight: bold
-            .italic
-                font-style: italic
+            .motd
+                &[data-color=lightpurple] // light_purple -> fuchsia
+                    color: fuchsia
+                &.bold
+                    font-weight: bold
+                &.italic
+                    font-style: italic
     .server-status
         p
             margin-top: 7px
