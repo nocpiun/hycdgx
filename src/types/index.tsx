@@ -4,6 +4,21 @@ interface PropsWithChildren {
     children?: ReactNode | undefined
 }
 
+interface PlayersInfo {
+    max: number
+    now: number
+}
+
+interface Motd {
+    extra: {
+        bold?: boolean
+        italic?: boolean
+        color: string
+        text: string
+    }[]
+    text: string
+}
+
 export interface ButtonLinkProps extends PropsWithChildren {
     to: string
     newtab?: boolean
@@ -15,31 +30,36 @@ export interface PageProps extends PropsWithChildren {
     source: string
 }
 
+export interface PageSectionProps extends PropsWithChildren {
+    title: string
+}
+
 export interface ImageBoxProps {
     src: string
     world: string
     where?: string
 }
 
-export interface ServerPlayer {
-    world: string
-    armor: number
+export interface ServerInfo {
+    online: boolean
+    icon: string
     name: string
-    x: number
-    y: number
-    z: number
-    health: number
-    sort: number
-    type: string
-    account: string
+    motd: Motd
+    players: PlayersInfo
 }
 
 export interface ServerInfoResponse {
-    currentcount: number
-    hasStorm: boolean
-    players: ServerPlayer[]
-    isThundering: boolean
-    confighash: number
-    servertime: number
-    timestamp: number
+    status: string
+    online: boolean
+    motd: string
+    motd_json: Motd
+    favicon: string
+    error: string | null
+    players: PlayersInfo
+    server: {
+        name: string
+        protocol: number
+    }
+    lastUpdated: string
+    duration: string
 }
