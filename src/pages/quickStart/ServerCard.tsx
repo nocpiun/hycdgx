@@ -37,6 +37,25 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
         });
     };
 
+    const pureText = (text: string, motd: boolean = false) => {
+        const parsedMotd = Utils.minecraftTextParser(text);
+
+        return parsedMotd.map((item, i) => {
+            var color;
+            var effect;
+            if(item.colorCode) color = Utils.minecraftCodeParser(item.colorCode);
+            if(item.effectCode) effect = Utils.minecraftCodeParser(item.effectCode);
+
+            var classList = [motd ? "motd" : ""];
+            if(effect) classList.push(effect);
+
+            return <span
+                className={classList.join(" ")}
+                style={{ color: color ?? undefined }}
+                key={i}>{item.text}</span>;
+        });
+    };
+
     useEffect(() => {
         setMessage("gray", "正在连接到服务器...");
 
@@ -64,32 +83,16 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
     useEffect(() => {
         if(!server.motd) return;
 
-        const pureTextMotd = (text: string) => {
-            const parsedMotd = Utils.minecraftTextParser(text);
-
-            return parsedMotd.map((item, i) => {
-                var color;
-                var effect;
-                if(item.colorCode) color = Utils.minecraftCodeParser(item.colorCode);
-                if(item.effectCode) effect = Utils.minecraftCodeParser(item.effectCode);
-
-                var classList = ["motd"];
-                if(effect) classList.push(effect);
-
-                return <span
-                    className={classList.join(" ")}
-                    style={{ color: color ?? undefined }}
-                    key={i}>{item.text}</span>;
-            });
-        };
-
         if(typeof server.motd === "string") {
-            setMotd(<>{pureTextMotd(server.motd)}</>);
+            setMotd(<>{pureText(server.motd, true)}</>);
         } else {
             const cb = (item: Motd, i: number) => {
                 var classList = ["motd"];
+                if(item.obfuscated) classList.push("garbled");
                 if(item.bold) classList.push("bold");
-                if(item.italic) classList.push("italic")
+                if(item.strikethrough) classList.push("del");
+                if(item.underlined) classList.push("under");
+                if(item.italic) classList.push("italic");
 
                 return <span
                     className={classList.join(" ")}
@@ -98,14 +101,14 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
                     key={i}>{
                         item.extra
                         ? item.extra.map(cb)
-                        : pureTextMotd(item.text)
+                        : pureText(item.text, true)
                     }</span>;
             };
 
             setMotd(<>{
                 server.motd.extra
                 ? server.motd.extra.map(cb)
-                : pureTextMotd(server.motd.text)
+                : pureText(server.motd.text, true)
             }</>);
         }
     }, [server]);
@@ -123,8 +126,8 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
                 <OverlayTrigger
                     overlay={server.players.sample.length > 0 ? <Tooltip>
                         {server.players.sample.map(({ name }) => {
-                            return name;
-                        }).join("\n")}
+                            return pureText(name +"\n");
+                        })}
                     </Tooltip> : <></>}>
                     <p>
                         {server.players.now === -1 ? "--" : server.players.now} / {server.players.max === -1 ? "--" : server.players.max}

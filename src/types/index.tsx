@@ -15,7 +15,10 @@ interface PlayersInfo {
 
 export interface Motd {
     extra?: Motd[]
+    obfuscated?: boolean
     bold?: boolean
+    strikethrough?: boolean
+    underlined?: boolean
     italic?: boolean
     color?: string
     text: string
