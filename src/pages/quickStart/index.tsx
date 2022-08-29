@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
 import Page from "../../components/Page";
 import Section from "../../components/Section";
 import ServerCard from "./ServerCard";
 import { qq } from "../../global";
+import { ServerCardProps } from "../../types";
 
 const QuickStart: React.FC = () => {
+    const [serverList, setServerList] = useState<ServerCardProps[]>([
+        { name: "HYCDGX 服务器 (mc.hycdgx.com)", host: "mc.hycdgx.com", port: 25565 },
+        { name: "HYCDGX 服务器 (play.hycdgx.com)", host: "play.hycdgx.com", port: 25565 },
+        { name: "HYCDGX 服务器 (v6only.hycdgx.com)", host: "v6only.hycdgx.com", port: 25565 },
+    ]);
+
     return (
         <Page id="quick-start" title="快速开始" source="/src/pages/quickStart/index.tsx">
             <p>HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等内容.</p>
@@ -41,8 +49,27 @@ const QuickStart: React.FC = () => {
             </Section>
 
             <Section title="服务器状态">
-                <ServerCard name="HYCDGX 服务器 (mc.hycdgx.com)" host="mc.hycdgx.com" port={25565}/>
-                <ServerCard name="HYCDGX 服务器 (v6only.hycdgx.com)" host="v6only.hycdgx.com" port={25565}/>
+                {serverList.map((cardProps, i) => {
+                    return <ServerCard {...cardProps} key={i}/>
+                })}
+
+                <Button
+                    className="ping-edit"
+                    variant="secondary"
+                    onClick={() => {
+                        var name = prompt("服务器名称", "Minecraft 服务器");
+                        var ip = prompt("服务器IP (example.com:25565)");
+
+                        if(name && ip) {
+                            var splited = ip.split(":");
+                            var port = splited.length === 2 ? parseInt(splited[1]) : 25565;
+
+                            setServerList([
+                                ...serverList,
+                                { name, host: splited[0], port }
+                            ]);
+                        }
+                    }}>添加</Button>
             </Section>
         </Page>
     );
