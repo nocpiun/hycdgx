@@ -41,7 +41,8 @@ const QuickStart: React.FC = () => {
             </Section>
 
             <Section title="服务器状态">
-                <ServerCard name="HYCDGX 服务器" host="mc.hycdgx.com" port={25565}/>
+                <ServerCard name="HYCDGX 服务器 (mc.hycdgx.com)" host="mc.hycdgx.com" port={25565}/>
+                <ServerCard name="HYCDGX 服务器 (v6only.hycdgx.com)" host="v6only.hycdgx.com" port={25565}/>
             </Section>
         </Page>
     );

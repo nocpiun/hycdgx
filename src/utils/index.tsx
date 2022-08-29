@@ -44,4 +44,105 @@ export default class Utils {
 
         return true;
     }
+
+    public static minecraftTextParser(text: string): Parsed[] {
+        var splited = text.split("§");
+        var parsed: Parsed[] = [];
+        
+        let tempColor = "";
+        for(let i = 0; i < splited.length; i++) {
+            if(i === 0) {
+                if(text[0] === "§") {
+                    parsed.push({
+                        colorCode: splited[i][0],
+                        text: splited[i].substring(1)
+                    });
+                } else {
+                    parsed.push({
+                        text: splited[i]
+                    });
+                }
+                continue;
+            }
+
+            if(splited[i].length === 1) {
+                tempColor = splited[i];
+                continue;
+            }
+            
+            if(tempColor !== "") {
+                parsed.push({
+                    effectCode: splited[i][0],
+                    colorCode: tempColor,
+                    text: splited[i].substring(1)
+                });
+                tempColor = "";
+                continue;
+            }
+
+            parsed.push({
+                colorCode: splited[i][0],
+                text: splited[i].substring(1)
+            });
+        }
+
+        return parsed;
+    }
+
+    public static minecraftCodeParser(effectCode: string): string {
+        switch(effectCode) {
+            case "k":
+                return "garbled";
+            case "l":
+                return "bold";
+            case "m":
+                return "del";
+            case "n":
+                return "under";
+            case "o":
+                return "italic";
+            case "r":
+                return "reset";
+            case "0":
+                return "black";
+            case "1":
+                return "mediumblue";
+            case "2":
+                return "darkgreen";
+            case "3":
+                return "darkcyan";
+            case "4":
+                return "red";
+            case "5":
+                return "darkviolet";
+            case "6":
+                return "gold";
+            case "7":
+                return "lightgray";
+            case "8":
+                return "gray";
+            case "9":
+                return "#3F40FD";
+            case "a":
+                return "green";
+            case "b":
+                return "#3EFFFE";
+            case "c":
+                return "crimson";
+            case "d":
+                return "#FF77FF";
+            case "e":
+                return "yellow";
+            case "f":
+                return "white";
+            default:
+                throw new Error("Unknown effect code.");
+        }
+    }
+}
+
+interface Parsed {
+    effectCode?: string
+    colorCode?: string
+    text: string
 }

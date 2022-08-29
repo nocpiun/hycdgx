@@ -7,15 +7,17 @@ interface PropsWithChildren {
 interface PlayersInfo {
     max: number
     now: number
+    sample: {
+        name: string
+        id: string
+    }[]
 }
 
-interface Motd {
-    extra: {
-        bold?: boolean
-        italic?: boolean
-        color: string
-        text: string
-    }[]
+export interface Motd {
+    extra?: Motd[]
+    bold?: boolean
+    italic?: boolean
+    color?: string
     text: string
 }
 
@@ -50,7 +52,7 @@ export interface ServerInfo {
     online: boolean
     icon: string
     name: string
-    motd: Motd
+    motd: Motd | string
     players: PlayersInfo
 }
 
@@ -58,7 +60,7 @@ export interface ServerInfoResponse {
     status: string
     online: boolean
     motd: string
-    motd_json: Motd
+    motd_json: Motd | string
     favicon: string
     error: string | null
     players: PlayersInfo
