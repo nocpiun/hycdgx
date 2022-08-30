@@ -98,17 +98,17 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
                     className={classList.join(" ")}
                     style={{ color: item.color ? item.color.replaceAll("_", "") : undefined }}
                     data-color={item.color ? item.color.replaceAll("_", "") : ""}
-                    key={i}>{
+                    key={i}>{pureText(item.text, true)}{
                         item.extra
                         ? item.extra.map(cb)
-                        : pureText(item.text, true)
+                        : null
                     }</span>;
             };
 
-            setMotd(<>{
+            setMotd(<>{pureText(server.motd.text, true)}{
                 server.motd.extra
                 ? server.motd.extra.map(cb)
-                : pureText(server.motd.text, true)
+                : null
             }</>);
         }
     }, [server]);
