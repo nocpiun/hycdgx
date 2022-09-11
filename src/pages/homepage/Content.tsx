@@ -4,6 +4,10 @@ import { Card } from "react-bootstrap";
 import { qq } from "../../global";
 
 const Content: React.FC = () => {
+    const donateHandle = () => {
+        document.body.dispatchEvent(new Event("donate"));
+    };
+
     return (
         <div className="content-container">
             <Card>
@@ -39,7 +43,7 @@ const Content: React.FC = () => {
                         <br /><br />
                         在您捐款后, 您的名字将会出现在服务器内的赞助榜.
                     </Card.Text>
-                    <Card.Link href="/donate.png" target="_blank">Donate</Card.Link>
+                    <Card.Link onClick={() => donateHandle()}>Donate</Card.Link>
                     <Card.Link href={qq} target="_blank">加入QQ群</Card.Link>
                 </Card.Body>
             </Card>
