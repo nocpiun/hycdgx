@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { Image } from "react-bootstrap";
+import { Image } from "antd";
 
 import Header from "./Header";
 import Content from "./Content";
@@ -24,17 +24,16 @@ const Homepage: React.FC = () => {
             <Header />
             <Content />
 
-            <div
-                className="donate"
-                style={{ display: isDonating ? "flex" : "none" }}
-                onClick={(e) => {
-                    const elem = e.target as HTMLElement;
-                    if(elem.id !== "donate-img") {
-                        setIsDonating(false);
+            <Image
+                src={donate}
+                style={{ display: "none" }}
+                preview={{
+                    visible: isDonating,
+                    src: donate,
+                    onVisibleChange: (value) => {
+                        setIsDonating(value);
                     }
-                }}>
-                <Image fluid src={donate} id="donate-img"/>
-            </div>
+                }}/>
         </div>
     );
 }

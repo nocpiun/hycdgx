@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button } from "antd";
 
 import Page from "../../components/Page";
 import Section from "../../components/Section";
@@ -55,7 +55,6 @@ const QuickStart: React.FC = () => {
 
                 <Button
                     className="ping-edit"
-                    variant="secondary"
                     onClick={() => {
                         var name = prompt("服务器名称", "Minecraft 服务器");
                         var ip = prompt("服务器IP (example.com:25565)");

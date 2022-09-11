@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, ReactElement } from "react";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Tooltip, Badge } from "antd";
 import Axios from "axios";
 
 import Utils from "../../utils";
@@ -113,26 +113,35 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
         }
     }, [server]);
 
+    const players = (server.players.now === -1 ? "--" : server.players.now) +" / "+ (server.players.max === -1 ? "--" : server.players.max);
+
     return (
         <div className="server-card">
             <div className="server-info">
                 <img src={server.icon ?? packpng} alt={server.name}/>
-                <div className="server-description" title={server.online ? "在线" : ""}>
+                <div className="server-description">
                     <p>{server.name}</p>
                     <div className="motd-container">{motd}</div>
                 </div>
             </div>
             <div className="server-status">
-                <OverlayTrigger
-                    overlay={server.players.sample.length > 0 ? <Tooltip>
-                        {server.players.sample.map(({ name }) => {
-                            return pureText(name +"\n");
-                        })}
-                    </Tooltip> : <></>}>
-                    <p>
-                        {server.players.now === -1 ? "--" : server.players.now} / {server.players.max === -1 ? "--" : server.players.max}
-                    </p>
-                </OverlayTrigger>
+                {server.online
+                ? <Badge status="success" text={
+                    <>
+                        {
+                            server.players.sample.length > 0
+                            ? <Tooltip title={
+                                server.players.sample.map(({ name }) => {
+                                    return pureText(name +"\n");
+                                })
+                            }>
+                                <p>{players}</p>
+                            </Tooltip>
+                            : <p>{players}</p>
+                        }
+                    </>
+                }/>
+                : <Badge status="default" text={<p>{players}</p>}/>}
             </div>
         </div>
     );

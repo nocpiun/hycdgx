@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // style
+import "antd/dist/antd.min.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style/layout.sass";
 
