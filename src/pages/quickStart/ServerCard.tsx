@@ -126,7 +126,7 @@ const ServerCard: React.FC<ServerCardProps> = (props) => {
             </div>
             <div className="server-status">
                 {server.online
-                ? <Badge status="success" text={
+                ? <Badge status="processing" color="#52c41a" text={
                     <>
                         {
                             server.players.sample.length > 0
