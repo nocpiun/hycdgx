@@ -8,11 +8,13 @@ import { qq } from "../../global";
 import { ServerCardProps } from "../../types";
 
 const QuickStart: React.FC = () => {
-    const [serverList, setServerList] = useState<ServerCardProps[]>([
+    const hycdgxHosts: ServerCardProps[] = [
         { name: "HYCDGX 服务器 (mc.hycdgx.com)", host: "mc.hycdgx.com", port: 25565 },
         { name: "HYCDGX 服务器 (play.hycdgx.com)", host: "play.hycdgx.com", port: 25565 },
-        { name: "HYCDGX 服务器 (v6only.hycdgx.com)", host: "v6only.hycdgx.com", port: 25565 },
-    ]);
+        { name: "HYCDGX 服务器 (la.hycdgx.com)", host: "la.hycdgx.com", port: 25565 },
+    ];
+
+    const [serverList, setServerList] = useState<ServerCardProps[]>(hycdgxHosts);
 
     return (
         <Page id="quick-start" title="快速开始" source="/src/pages/quickStart/index.tsx">
@@ -24,17 +26,9 @@ const QuickStart: React.FC = () => {
                 <p>首先, 你需要确保你的电脑上已经安装了Java 17和Minecraft 1.19.x</p>
                 <p>接下来, 服务器有3个IP地址供你选择:</p>
                 <ol>
-                    <li>
-                        <code>mc.hycdgx.com</code>
-                    </li>
-                    <li>
-                        <code>play.hycdgx.com</code>
-                    </li>
-                    <li>
-                        <code>v6only.hycdgx.com</code>
-                    </li>
+                    {hycdgxHosts.map(({ host }, index) => <li key={index}><code>{host}</code></li>)}
                 </ol>
-                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需配置Tailscale进服; <code>v6only.hycdgx.com</code> 是ipv6直连的IP地址, 需要你的网络环境支持ipv6.</p>
+                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需配置Tailscale进服; <code>la.hycdgx.com</code> 是北美区进服地址.</p>
                 <p>本服务器同时支持Java版和基岩版, 两个版本共用这几个IP地址, 且端口均为默认端口. (即Java版25565, 基岩版19132)</p>
             </Section>
 
