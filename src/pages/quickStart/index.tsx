@@ -11,6 +11,7 @@ const QuickStart: React.FC = () => {
     const hycdgxHosts: ServerCardProps[] = [
         { name: "HYCDGX 服务器 (mc.hycdgx.com)", host: "mc.hycdgx.com", port: 25565 },
         { name: "HYCDGX 服务器 (play.hycdgx.com)", host: "play.hycdgx.com", port: 25565 },
+        { name: "HYCDGX 服务器 (v6only.hycdgx.com)", host: "v6only.hycdgx.com", port: 25565 },
         { name: "HYCDGX 服务器 (la.hycdgx.com)", host: "la.hycdgx.com", port: 25565 },
     ];
 
@@ -28,7 +29,7 @@ const QuickStart: React.FC = () => {
                 <ol>
                     {hycdgxHosts.map(({ host }, index) => <li key={index}><code>{host}</code></li>)}
                 </ol>
-                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需配置Tailscale进服; <code>la.hycdgx.com</code> 是北美区进服地址.</p>
+                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需配置Tailscale进服; <code>v6only.hycdgx.com</code> 是ipv6专用地址, 需网络支持ipv6; <code>la.hycdgx.com</code> 是北美区进服地址.</p>
                 <p>本服务器同时支持Java版和基岩版, 两个版本共用这几个IP地址, 且端口均为默认端口. (即Java版25565, 基岩版19132)</p>
             </Section>
 

@@ -16,13 +16,13 @@ const Content: React.FC = () => {
                     <a href="https://www.bilibili.com/video/BV1rC4y1b7GB" target="_blank" rel="noreferrer">宣传片</a>
                 </>
             }>
-                HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等内容.
+                HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等.
                 <br /><br />
                 服务器还安装了货币交易系统, 可供玩家在服务器内通过货币换取更多物品.
             </Card>
             <Card title="服务器信息">
                 服务器目前已全面支持1.19.x版本<br />
-                新生存坑已开启, 欢迎前来开荒!
+                二周目生存档已开启, 欢迎前来开荒!
                 <br /><br />
                 IP: mc.hycdgx.com<br />
                 端口: 25565 (基岩版 19132)<br />
