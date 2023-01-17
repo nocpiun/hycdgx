@@ -6,7 +6,7 @@ const Section: React.FC<PageSectionProps> = (props) => {
     return (
         <>
             <hr />
-            <section>
+            <section id={props.title}>
                 <h3>{props.title}</h3>
 
                 {props.children}

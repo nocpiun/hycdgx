@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                         <p>一个小型Minecraft生存服</p>
                     </div>
                     <div className="quick-start-bar">
-                        <ButtonLink to="/quick-start">快速开始</ButtonLink>
+                        <ButtonLink to="/docs/quick-start">快速开始</ButtonLink>
                         <ButtonLink to={qq} newtab>加入QQ群</ButtonLink>
                     </div>
                 </div>

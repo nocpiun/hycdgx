@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-import { PageProps } from "../types";
+import { DocsPageProps } from "../types";
 import { mainTitle } from "../global";
 
-const Page: React.FC<PageProps> = (props) => {
+const DocsPage: React.FC<DocsPageProps> = (props) => {
     useEffect(() => {
         document.title = mainTitle +" - "+ props.title;
     }, [props.title]);
@@ -17,9 +17,12 @@ const Page: React.FC<PageProps> = (props) => {
                 <div className="content-container">
                     {props.children}
                 </div>
+                <footer>
+                    <a href={"https://github.com/nocpiun/hycdgx/blob/main"+ props.source} target="_blank" rel="noreferrer">在Github编辑此页面</a>
+                </footer>
             </article>
         </div>
     );
 }
 
-export default Page;
+export default DocsPage;

@@ -20,7 +20,7 @@ import img12 from "../../static/screenshot12.png";
 
 const Pictures: React.FC = () => {
     return (
-        <Page id="pictures" title="游戏截图" source="/src/pages/pictures/index.tsx">
+        <Page id="pictures" title="游戏截图">
             <Image.PreviewGroup>
                 <ImageBox src={img1} world="创造服"/>
                 <ImageBox src={img2} world="生存旧服" where="AnboFu1999的家"/>

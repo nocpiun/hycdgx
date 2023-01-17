@@ -32,6 +32,9 @@ export interface ButtonLinkProps extends PropsWithChildren {
 export interface PageProps extends PropsWithChildren {
     id?: string
     title: string
+}
+
+export interface DocsPageProps extends PageProps {
     source: string
 }
 

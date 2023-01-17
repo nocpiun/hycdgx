@@ -21,10 +21,13 @@ const Navbar: React.FC = () => {
                     <a href="/">HYCDGX</a>
                 </li>
                 <li>
-                    <a href="/quick-start">快速开始</a>
+                    <a href="/docs/quick-start">快速开始</a>
                 </li>
                 <li>
-                    <a href="/rules">游戏规则</a>
+                    <a href="/docs/rules">游戏规则</a>
+                </li>
+                <li>
+                    <a href="/docs/commands">常用指令</a>
                 </li>
                 <li>
                     <a href="/pictures">游戏截图</a>

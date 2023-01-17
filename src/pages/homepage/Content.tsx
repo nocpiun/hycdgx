@@ -12,7 +12,7 @@ const Content: React.FC = () => {
         <div className="content-container">
             <Card title="简介" extra={
                 <>
-                    <a href="/quick-start">快速开始</a>
+                    <a href="/docs/quick-start">快速开始</a>
                     <a href="https://www.bilibili.com/video/BV1rC4y1b7GB" target="_blank" rel="noreferrer">宣传片</a>
                 </>
             }>
@@ -22,7 +22,7 @@ const Content: React.FC = () => {
             </Card>
             <Card title="服务器信息">
                 服务器目前已全面支持1.19.x版本<br />
-                二周目生存档已开启, 欢迎前来开荒!
+                <b>二周目生存档已开启, 欢迎前来开荒!</b>
                 <br /><br />
                 IP: mc.hycdgx.com<br />
                 端口: 25565 (基岩版 19132)<br />
