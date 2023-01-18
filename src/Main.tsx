@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // style
 import "antd/dist/antd.min.css";
@@ -29,6 +29,7 @@ const Main: React.FC = () => {
                     <Route path="/docs/quick-start" element={<QuickStart />}/>
                     <Route path="/docs/rules" element={<Rules />}/>
                     <Route path="/docs/commands" element={<Commands />}/>
+                    <Route path="/docs" element={<Navigate to="/docs/quick-start"/>}/>
                     <Route path="/pictures" element={<Pictures />}/>
                     <Route path="/comment" element={<Comment />}/>
                     <Route path="/about" element={<About />}/>
