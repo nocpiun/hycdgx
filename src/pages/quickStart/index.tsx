@@ -25,7 +25,7 @@ const QuickStart: React.FC = () => {
 
             <Section title="如何游玩?">
                 <p>首先, 你需要确保你的电脑上已经安装了Java 17和Minecraft启动器</p>
-                <p>接下来, 服务器有3个IP地址供你选择:</p>
+                <p>接下来, 服务器有{hycdgxHosts.length}个IP地址供你选择:</p>
                 <ol>
                     {hycdgxHosts.map(({ host }, index) => <li key={index}><code>{host}</code></li>)}
                 </ol>
