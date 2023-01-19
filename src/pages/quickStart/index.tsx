@@ -21,7 +21,12 @@ const QuickStart: React.FC = () => {
         <DocsPage id="quick-start" title="快速开始" source="/src/pages/quickStart/index.tsx">
             <p>HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等内容.</p>
             <p>服务器还安装了货币交易系统和快捷商店插件, 可供玩家在服务器内更方便地获取更多物品.</p>
-            <p>同时, 服务器还开放了环服地图网站: <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">http://map.hycdgx.com</a>. 通过这个网站, 就可以不用进服也能观察服务器了.</p>
+            <p>同时, 服务器还开放了环服地图网站, 通过它就可以不用进服也能观察服务器了.</p>
+
+            <ul>
+                <li>环服地图站: <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">http://map.hycdgx.com</a></li>
+                <li>环服地图备用站(ipv6): <a href="http://v6only.hycdgx.com:8888" target="_blank" rel="noreferrer">http://v6only.hycdgx.com:8888</a></li>
+            </ul>
 
             <Section title="如何游玩?">
                 <p>首先, 你需要确保你的电脑上已经安装了Java 17和Minecraft启动器</p>
