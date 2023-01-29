@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Button } from "antd";
 
+import Link from "../../components/Link";
+
 import { qq } from "../../global";
 
 const Content: React.FC = () => {
@@ -13,7 +15,7 @@ const Content: React.FC = () => {
             <Card title="简介" extra={
                 <>
                     <a href="/docs/quick-start">快速开始</a>
-                    <a href="https://www.bilibili.com/video/BV1rC4y1b7GB" target="_blank" rel="noreferrer">宣传片</a>
+                    <Link to="https://www.bilibili.com/video/BV1rC4y1b7GB">宣传片</Link>
                 </>
             }>
                 HYCDGX是一个Minecraft生存服务器, 它不仅是一个生存服, 里面还包括了创造世界, 地皮世界等等.
@@ -31,7 +33,7 @@ const Content: React.FC = () => {
             <Card title="赞助" extra={
                 <>
                     <Button type="link" onClick={() => donateHandle()}>Donate</Button>
-                    <a href={qq} target="_blank" rel="noreferrer">加入QQ群</a>
+                    <Link to={qq}>加入QQ群</Link>
                 </>
             }>
                 请注意您氪金后 <b>无法</b> 获得任何物品, 您的捐款会添置到服务器配置, 网络宽带等地方. 谢谢您的支持!

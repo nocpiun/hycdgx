@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "antd";
+import Link from "../../components/Link";
 
 import DocsPage from "../../components/DocsPage";
 import Section from "../../components/Section";
@@ -9,10 +10,10 @@ import { ServerCardProps } from "../../types";
 
 const QuickStart: React.FC = () => {
     const hycdgxHosts: ServerCardProps[] = [
-        { name: "HYCDGX 服务器 (mc.hycdgx.com)", host: "mc.hycdgx.com", port: 25565 },
-        { name: "HYCDGX 服务器 (play.hycdgx.com)", host: "play.hycdgx.com", port: 25565 },
-        { name: "HYCDGX 服务器 (v6only.hycdgx.com)", host: "v6only.hycdgx.com", port: 25565 },
-        { name: "HYCDGX 服务器 (la.hycdgx.com)", host: "la.hycdgx.com", port: 25565 },
+        { name: "[ipv6直连] v6only.hycdgx.com (推荐)", host: "v6only.hycdgx.com", port: 25565 },
+        { name: "[ipv4直连] s.hycdgx.com:26230 (动态端口) (推荐)", host: "s.hycdgx.com", port: 26230 },
+        { name: "[进服软件专用] play.hycdgx.com", host: "play.hycdgx.com", port: 25565 },
+        { name: "[广州中转] mc.hycdgx.com (较慢)", host: "mc.hycdgx.com", port: 25565 },
     ];
 
     const [serverList, setServerList] = useState<ServerCardProps[]>(hycdgxHosts);
@@ -24,18 +25,18 @@ const QuickStart: React.FC = () => {
             <p>同时, 服务器还开放了环服地图网站, 通过它就可以不用进服也能观察服务器了.</p>
 
             <ul>
-                <li>环服地图站: <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">http://map.hycdgx.com</a></li>
-                <li>环服地图备用站(ipv6): <a href="http://v6only.hycdgx.com:8888" target="_blank" rel="noreferrer">http://v6only.hycdgx.com:8888</a></li>
+                <li>环服地图站: <Link to="http://map.hycdgx.com">http://map.hycdgx.com</Link></li>
+                <li>环服地图备用站(ipv6): <Link to="http://v6only.hycdgx.com:8888">http://v6only.hycdgx.com:8888</Link></li>
             </ul>
 
             <Section title="如何游玩?">
                 <p>首先, 你需要确保你的电脑上已经安装了Java 17和Minecraft启动器</p>
                 <p>接下来, 服务器有{hycdgxHosts.length}个IP地址供你选择:</p>
                 <ol>
-                    {hycdgxHosts.map(({ host }, index) => <li key={index}><code>{host}</code></li>)}
+                    {hycdgxHosts.map(({ name }, index) => <li key={index}><code>{name}</code></li>)}
                 </ol>
-                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需<a href="/docs/quick-start#配置Tailscale进服">配置Tailscale进服</a>; <code>v6only.hycdgx.com</code> 是ipv6专用地址, 需网络支持ipv6; <code>la.hycdgx.com</code> 是北美区进服地址.</p>
-                <p>本服务器同时支持Java版和基岩版, 两个版本共用这几个IP地址, 且端口均为默认端口. (即Java版25565, 基岩版19132)</p>
+                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需<a href="/docs/quick-start#配置Tailscale进服">配置Tailscale进服</a>; 除ipv4直连入口外, 其他IP地址的端口均为默认端口. (即Java版25565, 基岩版19132)</p>
+                <p><b>ipv4直连入口的动态端口获取: <Link to="https://live.bilibili.com/5436698">https://live.bilibili.com/5436698</Link></b></p>
             </Section>
 
             <Section title="版本要求">
@@ -48,11 +49,11 @@ const QuickStart: React.FC = () => {
             <Section title="配置Tailscale进服">
                 <p>如果你想提升你在服务器中的游玩体验, 这里推荐配置Tailscale来进入服务器.</p>
                 <ol>
-                    <li>下载Tailscale: <a href="https://tailscale.com/download/" target="_blank" rel="noreferrer">https://tailscale.com/download/</a></li>
+                    <li>下载Tailscale: <Link to="https://tailscale.com/download/">https://tailscale.com/download/</Link></li>
                     <li>安装后会自动弹出登录窗口, 选择微软登录. <b>用户名</b>: <code>hycdgxmc@outlook.com</code> <b>密码</b>: <code>Minecraft8$</code></li>
-                    <li>登录后即配置成功, 即可使用<code>play.hycdgx.com</code>进服, 以及<a href="http://play.hycdgx.com:8888" target="_blank" rel="noreferrer">进服软件专用地图站</a></li>
+                    <li>登录后即配置成功, 即可使用<code>play.hycdgx.com</code>进服, 以及<Link to="http://play.hycdgx.com:8888">进服软件专用地图站</Link></li>
                 </ol>
-                <p>若按照步骤操作时出现任何问题, 敬请进入<a href={qq} target="_blank" rel="noreferrer">QQ群</a>询问!</p>
+                <p>若按照步骤操作时出现任何问题, 敬请进入<Link to={qq}>QQ群</Link>询问!</p>
             </Section>
 
             <Section title="服务器状态">

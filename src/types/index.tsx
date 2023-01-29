@@ -77,3 +77,7 @@ export interface ServerInfoResponse {
     lastUpdated: string
     duration: string
 }
+
+export interface LinkProps extends PropsWithChildren {
+    to: string
+}
