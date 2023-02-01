@@ -17,6 +17,11 @@ import img9 from "../../static/screenshot9.png";
 import img10 from "../../static/screenshot10.png";
 import img11 from "../../static/screenshot11.png";
 import img12 from "../../static/screenshot12.png";
+import img13 from "../../static/screenshot13.png";
+import img14 from "../../static/screenshot14.png";
+import img15 from "../../static/screenshot15.png";
+import img16 from "../../static/screenshot16.png";
+import img17 from "../../static/screenshot17.png";
 
 const Pictures: React.FC = () => {
     return (
@@ -34,6 +39,11 @@ const Pictures: React.FC = () => {
                 <ImageBox src={img10} world="创造服"/>
                 <ImageBox src={img11} world="生存旧服" where="主城 / 商店"/>
                 <ImageBox src={img12} world="生存新服" where="出生点"/>
+                <ImageBox src={img13} world="生存新服" where="市中心"/>
+                <ImageBox src={img14} world="生存新服" where="地铁总站"/>
+                <ImageBox src={img15} world="生存新服" where="Peace Land"/>
+                <ImageBox src={img16} world="生存新服" where="wuzhea的树屋"/>
+                <ImageBox src={img17} world="生存新服" where="全物品收集站"/>
             </Image.PreviewGroup>
         </Page>
     );
