@@ -39,7 +39,7 @@ const Pictures: React.FC = () => {
                 <ImageBox src={img10} world="创造服"/>
                 <ImageBox src={img11} world="生存旧服" where="主城 / 商店"/>
                 <ImageBox src={img12} world="生存新服" where="出生点"/>
-                <ImageBox src={img13} world="生存新服" where="市中心"/>
+                <ImageBox src={img13} world="生存新服" where="蒸汽小镇"/>
                 <ImageBox src={img14} world="生存新服" where="地铁总站"/>
                 <ImageBox src={img15} world="生存新服" where="Peace Land"/>
                 <ImageBox src={img16} world="生存新服" where="wuzhea的树屋"/>
