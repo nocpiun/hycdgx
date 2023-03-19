@@ -11,7 +11,7 @@ import { ServerCardProps } from "../../types";
 const QuickStart: React.FC = () => {
     const hycdgxHosts: ServerCardProps[] = [
         { name: "[ipv6直连] v6only.hycdgx.com (推荐)", host: "v6only.hycdgx.com", port: 25565 },
-        { name: "[ipv4直连] s.hycdgx.com:47124 (动态端口) (推荐)", host: "s.hycdgx.com", port: 47124 },
+        { name: "[ipv4直连] s.hycdgx.com:56672 (动态端口) (推荐)", host: "s.hycdgx.com", port: 56672 },
         { name: "[进服软件专用] play.hycdgx.com", host: "play.hycdgx.com", port: 25565 },
         { name: "[广州中转] mc.hycdgx.com (较慢)", host: "mc.hycdgx.com", port: 25565 },
     ];
