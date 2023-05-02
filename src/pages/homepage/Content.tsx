@@ -3,8 +3,6 @@ import { Card, Button } from "antd";
 
 import Link from "../../components/Link";
 
-import { qq } from "../../global";
-
 const Content: React.FC = () => {
     const donateHandle = () => {
         document.body.dispatchEvent(new Event("donate"));
@@ -30,7 +28,7 @@ const Content: React.FC = () => {
                 端口: 25565 (基岩版 19132)<br />
                 版本: Minecraft Java & Bedrock 1.19.x
             </Card>
-            <Card title="赞助" extra={<Button type="link" onClick={() => donateHandle()}>Donate</Button>}>
+            <Card title="赞助" extra={<Button type="link" onClick={() => donateHandle()}>捐助我们</Button>}>
                 请注意您氪金后 <b>无法</b> 获得任何物品, 您的捐款会添置到服务器配置, 网络宽带等地方. 谢谢您的支持!
                 <br /><br />
                 在您捐款后, 您的名字将会出现在服务器内的赞助榜.

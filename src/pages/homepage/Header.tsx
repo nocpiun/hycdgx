@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         if(Math.abs(x) + width > bs[0] * zoomIn) x = -(bs[0] * zoomIn - width);
         if(Math.abs(y) + height > bs[1] * zoomIn) y = -(bs[1] * zoomIn - height);
 
-        setMousePos([x, y]);
+        setMousePos([x, y])
     };
 
     const handleMouseLeave = () => {
