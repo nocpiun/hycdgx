@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         if(Math.abs(x) + width > bs[0] * zoomIn) x = -(bs[0] * zoomIn - width);
         if(Math.abs(y) + height > bs[1] * zoomIn) y = -(bs[1] * zoomIn - height);
 
-        setMousePos([x, y]);
+        setMousePos([x, y])
     };
 
     const handleMouseLeave = () => {
@@ -61,6 +61,7 @@ const Header: React.FC = () => {
                     <div className="quick-start-bar">
                         <ButtonLink to="/docs/quick-start">快速开始</ButtonLink>
                         <ButtonLink to={qq} newtab>加入QQ群</ButtonLink>
+                        <ButtonLink to="/docs/commands">常用指令</ButtonLink>
                     </div>
                 </div>
             </div>

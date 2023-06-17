@@ -11,9 +11,9 @@ import { ServerCardProps } from "../../types";
 const QuickStart: React.FC = () => {
     const hycdgxHosts: ServerCardProps[] = [
         { name: "[ipv6直连] v6only.hycdgx.com (推荐)", host: "v6only.hycdgx.com", port: 25565 },
-        { name: "[ipv4直连] s.hycdgx.com:56672 (动态端口) (推荐)", host: "s.hycdgx.com", port: 56672 },
+        { name: "[广州中转] mc.hycdgx.com (推荐)", host: "mc.hycdgx.com", port: 25565 },
+        { name: "[ipv4直连] s.hycdgx.com:56672 (动态端口)", host: "s.hycdgx.com", port: 56672 },
         { name: "[进服软件专用] play.hycdgx.com", host: "play.hycdgx.com", port: 25565 },
-        { name: "[广州中转] mc.hycdgx.com (较慢)", host: "mc.hycdgx.com", port: 25565 },
     ];
 
     const [serverList, setServerList] = useState<ServerCardProps[]>(hycdgxHosts);
@@ -30,7 +30,7 @@ const QuickStart: React.FC = () => {
             </ul>
 
             <Section title="如何游玩?">
-                <p>首先, 你需要确保你的电脑上已经安装了Java 17和Minecraft启动器</p>
+                <p>首先, 你需要确保你的电脑上已经安装了Java 17(或更高版本)和Minecraft启动器</p>
                 <p>接下来, 服务器有{hycdgxHosts.length}个IP地址供你选择:</p>
                 <ol>
                     {hycdgxHosts.map(({ name }, index) => <li key={index}><code>{name}</code></li>)}
