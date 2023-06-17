@@ -24,7 +24,7 @@ const Content: React.FC = () => {
             </Card>
             <Card title="服务器信息">
                 服务器目前已全面支持1.19.x版本<br />
-                <b>二周目生存档已开启, 欢迎前来开荒!</b>
+                1.20.x目前已支持进服
                 <br /><br />
                 IP: mc.hycdgx.com<br />
                 端口: 25565 (基岩版 19132)<br />
