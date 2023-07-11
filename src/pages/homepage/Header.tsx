@@ -61,7 +61,7 @@ const Header: React.FC = () => {
                     <div className="quick-start-bar">
                         <ButtonLink to="/docs/quick-start">快速开始</ButtonLink>
                         <ButtonLink to={qq} newtab>加入QQ群</ButtonLink>
-                        <ButtonLink to="/docs/commands">常用指令</ButtonLink>
+                        <ButtonLink to="http://start.hycdgx.com:8000/start">自助开服</ButtonLink>
                     </div>
                 </div>
             </div>

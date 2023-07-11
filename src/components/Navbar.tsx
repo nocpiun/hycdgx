@@ -30,6 +30,9 @@ const Navbar: React.FC = () => {
                     <a href="/pictures">游戏截图</a>
                 </li>
                 <li>
+                    <a href="/docs/commands">常用指令</a>
+                </li>
+                <li>
                     <a href="http://map.hycdgx.com" target="_blank" rel="noreferrer">地图</a>
                 </li>
                 <li>

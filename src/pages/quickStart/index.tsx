@@ -12,7 +12,6 @@ const QuickStart: React.FC = () => {
     const hycdgxHosts: ServerCardProps[] = [
         { name: "[ipv6直连] v6only.hycdgx.com (推荐)", host: "v6only.hycdgx.com", port: 25565 },
         { name: "[广州中转] mc.hycdgx.com (推荐)", host: "mc.hycdgx.com", port: 25565 },
-        { name: "[ipv4直连] s.hycdgx.com:56672 (动态端口)", host: "s.hycdgx.com", port: 56672 },
         { name: "[进服软件专用] play.hycdgx.com", host: "play.hycdgx.com", port: 25565 },
     ];
 
@@ -31,12 +30,18 @@ const QuickStart: React.FC = () => {
 
             <Section title="如何游玩?">
                 <p>首先, 你需要确保你的电脑上已经安装了Java 17(或更高版本)和Minecraft启动器</p>
-                <p>接下来, 服务器有{hycdgxHosts.length}个IP地址供你选择:</p>
+                <p>接下来, 请自助开服</p>
+                <p>然后, 服务器有{hycdgxHosts.length}个IP地址供你选择:</p>
                 <ol>
                     {hycdgxHosts.map(({ name }, index) => <li key={index}><code>{name}</code></li>)}
                 </ol>
-                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需<a href="/docs/quick-start#配置Tailscale进服">配置Tailscale进服</a>; 除ipv4直连入口外, 其他IP地址的端口均为默认端口. (即Java版25565, 基岩版19132)</p>
-                <p><b>ipv4直连入口的动态端口获取: <Link to="https://live.bilibili.com/5436698">https://live.bilibili.com/5436698</Link></b></p>
+                <p>其中, <code>play.hycdgx.com</code> 是进服软件专用地址, 需<a href="/docs/quick-start#配置Tailscale进服">配置Tailscale进服</a>; 所有IP地址的端口均为默认端口. (即Java版25565, 基岩版19132)</p>
+            </Section>
+
+            <Section title="自助开服">
+                <p>本服务器实行<b>自助开服</b>. 即一般时段服务器保持关闭状态, 当玩家需要进服游玩时, 点击“自助开服”按钮, 则服务器自动开服1小时; 之后若服务器无玩家在线, 则服务器自动关闭, 直到下一位玩家点击“自助开服”。</p>
+                <p><b><Link to="http://start.hycdgx.com:8000/start">自助开服（无反应就多点几次）</Link></b></p>
+                <p><b><Link to="https://live.bilibili.com/5436698">B站直播间查看服务器状态</Link></b></p>
             </Section>
 
             <Section title="版本要求">
